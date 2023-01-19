@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculate uppercase</title>
+</head>
+<body>
+    <h1>Insert the text here to see the lowercase count</h1>
+    <form action="lower" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="">Enter the text here: </label> <br>
+            <textarea name="text" id="" cols="100" rows="7"></textarea>
+        </div>
+
+        <input type="submit" value="Calculate lowercase">
+    </form>
+
+    
+    <h4>Result: </h4>
+    {{ lw }}
+
+
+    <hr>
+    <h4>Other Actions: </h4>
+    <a href="/"><button>Calculate Words</button></a>
+    <a href="/consonants"><button>Calculate Consonants</button></a>
+    <a href="vowels"><button>Calculate Vowels</button></a>
+    <a href="/chars"><button>Convert in characters</button></a>
+    <a href="/upper"><button>Convert in uppercase</button></a>
+</body>
+</html>
