@@ -9,3 +9,6 @@ urlpatterns = [
     path('upper', views.upper, name='upper'),
     path('lower', views.lower, name='lower'),
 ]
+
+
+
